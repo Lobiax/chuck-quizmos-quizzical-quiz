@@ -19,15 +19,15 @@ h2 {
     text-align: center;
 }
 
-#correct_answer {
+#correct-answer {
     color: green;
 }
 
-#incorrect_answer {
+#incorrect-answer {
     color: red;
 }
 
-#question_area {
+#question-area {
     border: 1px solid black;
     width: 70vw;
     height: 20vh;
@@ -40,7 +40,7 @@ h2 {
     font-size: 150%;
 }
 
-#answer_area {
+#answer-area {
     border: 1px solid black;
     width: 70vw;
     height: 40vh;
