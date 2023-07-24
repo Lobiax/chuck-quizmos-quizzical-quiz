@@ -1,6 +1,7 @@
 body {
     height: 100%;
     width: 100%;
+    background-color: aliceblue;
 }
 
 h1 {
@@ -31,10 +32,12 @@ h2 {
     width: 70vw;
     height: 20vh;
     margin: auto;
+    background-color: white;
 }
 
 #question {
     text-align: center;
+    font-size: 150%;
 }
 
 #answer_area {
@@ -49,22 +52,26 @@ h2 {
     float: left;
     width: 50%;
     height: 50%;
+    font-size: 150%;
 }
 
 #answer2 {
     float: right;
     width: 50%;
     height: 50%;
+    font-size: 150%;
 }
 
 #answer3 {
     float: left;
     width: 50%;
     height: 50%;
+    font-size: 150%;
 }
 
 #answer4 {
     float: right;
     width: 50%;
     height: 50%;
+    font-size: 150%;
 }
