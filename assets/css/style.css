@@ -7,3 +7,64 @@ h1 {
     text-align: center;
     font-family: 'Lora', serif;
 }
+
+h2,
+p,
+button {
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    text-align: center;
+}
+
+#correct_answer {
+    color: green;
+}
+
+#incorrect_answer {
+    color: red;
+}
+
+#question_area {
+    border: 1px solid black;
+    width: 70vw;
+    height: 20vh;
+    margin: auto;
+}
+
+#question {
+    text-align: center;
+}
+
+#answer_area {
+    border: 1px solid black;
+    width: 70vw;
+    height: 40vh;
+    margin: auto;
+
+}
+
+#answer1 {
+    float: left;
+    width: 50%;
+    height: 50%;
+}
+
+#answer2 {
+    float: right;
+    width: 50%;
+    height: 50%;
+}
+
+#answer3 {
+    float: left;
+    width: 50%;
+    height: 50%;
+}
+
+#answer4 {
+    float: right;
+    width: 50%;
+    height: 50%;
+}
