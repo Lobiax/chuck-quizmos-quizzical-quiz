@@ -106,6 +106,9 @@ function checkAnswer(element) {
         incrementIncorrectAnswer();
     }
     currentQuestion++;
+    if (currentQuestion === quizQuestions.length) {
+        quizComplete();
+    }
     displayQuestion();
 }
 
@@ -118,6 +121,7 @@ function incrementIncorrectAnswer() {
     let previousIncorrect = parseInt(document.getElementById("incorrect").innerHTML);
     document.getElementById("incorrect").innerHTML = ++previousIncorrect;
 }
+/** This function shows the user their score at the end of the quiz */
 function quizComplete() {
     alert(`Congratulations! You got ${previousScore} out of 7 right`);
     location.reload;
