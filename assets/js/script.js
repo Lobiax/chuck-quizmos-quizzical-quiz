@@ -64,7 +64,7 @@ let quizQuestions = [
         ],
     },
 ];
-
+// these are the variables needed for the logic
 let questionText = document.getElementById("question");
 let answerButton = document.getElementsByClassName("answer");
 let answerArray = Array.from(answerButton);
@@ -91,6 +91,7 @@ function displayQuestion() {
         }
     }
 }
+/**This uses the answerArray array to addeventlistener to each button */
 answerArray.forEach(element => {
     element.addEventListener("click", function () {
         checkAnswer(element);
@@ -108,6 +109,8 @@ function checkAnswer(element) {
     currentQuestion++;
     if (currentQuestion === quizQuestions.length) {
         quizComplete();
+        location.reload();
+
     }
     displayQuestion();
 }
@@ -123,7 +126,14 @@ function incrementIncorrectAnswer() {
 }
 /** This function shows the user their score at the end of the quiz */
 function quizComplete() {
-    alert(`Congratulations! You got ${previousScore} out of 7 right`);
-    location.reload;
+    if (previousScore > 4) {
+        alert(`Congratulations! You got ${previousScore} out of 7 right`);
+
+    } else {
+        alert(`Ouch... You got ${previousScore} out of 7 right`);
+
+    }
+
+
 }
 
