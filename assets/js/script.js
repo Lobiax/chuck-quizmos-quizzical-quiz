@@ -1,3 +1,4 @@
+/** This variable contains an array of the questions and answers */
 let quizQuestions = [
     {
         question: "What Pharaoh does the Great Sphynx of Giza represent?",
@@ -68,6 +69,7 @@ let questionText = document.getElementById("question");
 let answerButton = document.getElementsByClassName("answer");
 let answerArray = Array.from(answerButton);
 let currentQuestion = 0;
+let previousScore = parseInt(document.getElementById("score").innerHTML);
 
 document.addEventListener("DOMContentLoaded", startGame());
 
@@ -100,25 +102,24 @@ function checkAnswer(element) {
     console.log(element);
     if (element.classList.contains("correct")) {
         incrementScore();
-        console.log("true");
-
     } else {
         incrementIncorrectAnswer();
-        console.log("false");
     }
     currentQuestion++;
     displayQuestion();
-    console.log(currentQuestion);
 }
 
 /** This increments the score counter */
 function incrementScore() {
-    let previousScore = parseInt(document.getElementById("score").innerHTML);
     document.getElementById("score").innerHTML = ++previousScore;
 }
 /**This increments the incorrect answers counter */
 function incrementIncorrectAnswer() {
     let previousIncorrect = parseInt(document.getElementById("incorrect").innerHTML);
     document.getElementById("incorrect").innerHTML = ++previousIncorrect;
+}
+function quizComplete() {
+    alert(`Congratulations! You got ${previousScore} out of 7 right`);
+    location.reload;
 }
 
