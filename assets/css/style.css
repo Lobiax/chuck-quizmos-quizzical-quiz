@@ -75,3 +75,14 @@ h2 {
     height: 50%;
     font-size: 150%;
 }
+
+@media screen and (max-width: 650px) {
+
+    #question,
+    #answer1,
+    #answer2,
+    #answer3,
+    #answer4 {
+        font-size: 100%;
+    }
+}
