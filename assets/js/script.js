@@ -71,6 +71,7 @@ let answerArray = Array.from(answerButton);
 let currentQuestion = 0;
 let previousScore = parseInt(document.getElementById("score").innerHTML);
 
+// This makes sure the page is loaded before starting the game
 document.addEventListener("DOMContentLoaded", startGame());
 
 /** This functions starts the game */

@@ -76,6 +76,7 @@ h2 {
     font-size: 150%;
 }
 
+/* Introduced so that the text will not spill over on small screens */
 @media screen and (max-width: 650px) {
 
     #question,
