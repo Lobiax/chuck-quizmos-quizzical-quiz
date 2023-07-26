@@ -67,6 +67,7 @@ let quizQuestions = [
 let questionText = document.getElementById("question");
 let answerButton = document.getElementsByClassName("answer");
 let answerArray = Array.from(answerButton);
+let currentQuestion = 0;
 
 document.addEventListener("DOMContentLoaded", startGame());
 
@@ -78,26 +79,36 @@ function startGame() {
 
 /** This function displays the questions */
 function displayQuestion() {
-    questionText.innerHTML = quizQuestions[0].question;
+    questionText.innerHTML = quizQuestions[currentQuestion].question;
     for (let i = 0; i < answerButton.length; i++) {
         let btn = answerButton[i];
-        btn.innerHTML = quizQuestions[0].answers[i].option;
+        btn.innerHTML = quizQuestions[currentQuestion].answers[i].option;
+        btn.classList.remove("correct");
+        if (quizQuestions[currentQuestion].answers[i].answer === true) {
+            btn.classList.add("correct");
+        }
     }
 }
 answerArray.forEach(element => {
-    element.addEventListener("click", checkAnswer);
+    element.addEventListener("click", function () {
+        checkAnswer(element);
+    });
 });
 
-/** This function checks whether the answer is correct or incorrect */
-function checkAnswer() {
-    if (quizQuestions.option == true) {
+/** This function checks whether the answer is correct or incorrect and then increments current question*/
+function checkAnswer(element) {
+    console.log(element);
+    if (element.classList.contains("correct")) {
         incrementScore();
         console.log("true");
+
     } else {
         incrementIncorrectAnswer();
         console.log("false");
     }
-
+    currentQuestion++;
+    displayQuestion();
+    console.log(currentQuestion);
 }
 
 /** This increments the score counter */
