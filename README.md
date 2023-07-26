@@ -1,39 +1,127 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Chuck Quizmos Quizzical Quiz
 
-Welcome,
+![responsive](assets/images/responsive.PNG)
 
-This is the Code Institute student template for Codeanywhere. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
-
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **May 11th, 2023**
-
-## Codeanywhere Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
-
-`python3 -m http.server`
-
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
-
-`http_server`
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+- Introduction
+- Features
+- Testing
+- Deployment
+- Credits
 
 ---
 
-Happy coding!
+## **Introduction**
+
+Chuck Quizmos Quizzical Quiz is here to puzzle you and challenge your trivia knowledge! Can you get them all right?
+
+### **Screenshots**
+
+- Here is a screenshot of the finished product.
+
+![page](assets/images/page.PNG)
+
+---
+
+## **Features**
+
+![heading](assets/images/heading.PNG)
+
+### **Heading**
+
+- The heading exists to create awareness of the name and give identity to the quiz which otherwise would be very forgettable.
+
+---
+
+![incrementers](assets/images/incrementers.PNG)
+
+### **Incrementers**
+
+- The incrementers provide feedback to the user on how they're doing and keeps track of their score.
+
+- The values of the incrementers also help influence whether the user get a positive or a negative alert at the end of the quiz.
+
+---
+
+![question](assets/images/question.PNG)
+
+### **Question**
+
+- The largest portion of the space of the screen is allocated to the current question of the trivia so that the user has as easy of a time as possible to read it and make their guess.
+
+- Using the displayQuestion function in conjunction with the checkAnswer function increment and keep the same question from repeating.
+
+---
+
+![answers](assets/images/answers.PNG)
+
+### **Answer Area**
+
+- The quiz is a multiple choice quiz.
+- The user is given 4 choices to try and guess right.
+
+![alert](assets/images/alert.PNG)
+
+### **Alert**
+
+- At the end of the quiz the user is given an alert to tell them how they did.
+- There are two possible alerts, one positive if a high score is achieved and one less congratulatory if the user didn't do so well.
+
+---
+
+## **Testing**
+
+### **Validation**
+
+- All HTML pages have been checked with the official W3C HTML validator and received no errors.
+
+- The CSS page have been checked with the official jigsaw W3C CSS validator and comes back with no errors.
+- The JavaScript have been checked with JSHint and comes back without warnings.
+
+### **Responsiveness**
+
+- The website has been thoroughly checked on desktop with browsers Chrome, Edge and Opera with no irregularities found.
+
+- Testing to ensure that the pages are responsive have been done in devtools as well as on my own and my girlfriends smartphones.
+
+### **Bugs**
+
+- A previous bug allowed the user to keep playing after the quiz was complete without it properly reseting. This has since been fixed by changing the parameters of an if clause.
+- No currently known unfixed bugs.
+
+### **Version Control**
+
+- The live site has been version controlled to ensure that it is up-to-date.
+
+### **Lighthouse**
+
+- I ran the website through the Lighthouse function both on devtools and on [pagespeed.web.dev](https://pagespeed.web.dev)
+
+- It yielded good results and i believe no bigger changes need be done.
+
+![lighthouse](assets/images/lighthouse.PNG)
+
+---
+
+## **Deployment**
+
+- The site was deployed through Github pages. The following are the steps i took to do so.
+
+- In the github repository for the project i first click on 'settings'.
+
+- Then on the left hand side of the screen i click the 'pages' option
+
+- I then chose to deploy from a branch and when asked what branch to deploy from i select 'main branch'.
+
+- After a few minutes i can now see that the page is deployed and that the site is live.
+
+- The current live site is [Here](https://lobiax.github.io/chuck-quizmos-quizzical-quiz/)
+
+---
+
+## **Credits**
+
+### **Content/Code**
+
+- The code for the incrementing score/incorrect answer functions was almost copied from the Love Maths walkthrough project.
+
+- While no code was copied i used w3schools and developer.mozilla to see proper syntax for forEach functions, arrow functions, if/else functions and how to convert an object into an array.
